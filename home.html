@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PPGee Zone</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato|Fjalla+One' rel='stylesheet' type='text/css'>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="js/plugins/sweetalert/sweetalert.css">
+    <link rel="stylesheet" href="css/home.css">
+
+  </head>
+
+  <body>
+
+    <header class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span><img src="img/menu-icon.png" width="22" height="23"></span>
+          </a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="#" class="active">首页</a></li>
+              <li><a href="#aboutme">关于我</a></li>
+              <li><a href="#">PGee分享</a></li>
+              <li><a href="#">留言板</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">你的空间 <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a id="username" href="javascript:void(0);">请登录</a></li>
+                  <li class="divider"></li>
+                  <li><a id="logout" href="javascript:void(0);">注销登录</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="search">
+            <form class="navbar-search">
+                <input type="text" class="search-query" placeholder="Search">
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="contain-top wrap bg1">
+      <div class="container">
+        <div class="hero-unit">
+          <div class="brand">
+           <h1>PPGEE ZONE</h1>
+          </div>
+          <h2 class="hide-text">一个不穿格子衬衫的程序员。</h2>
+          <p><a href="blog/index.php" target="blank" class="btn-header">PPGEE BLOG&nbsp;<img style="display: inline;" src="img/button-arrow.png" width="22" height="23"></a></p>
+          <div class="row-fluid">
+            <div class="header-image"><img src="img/main-banner.jpg" width="1170" height="485" alt="banner"></div>
+          </div>
+        </div>
+        <div class="row-fluid spacing-top-bottom">
+          <div class="span4">
+            <h1>国内地区选择框组件</h1>
+            <h2>实现方式：jQuery+Bootstrap</h2>
+            <p class="p-pad">因为公司的流量平台要求，需要做出一个组件来进行管理可充值流量地区，于是做出该选择框</p>
+            <p><a href="https://github.com/MangoGee/myLittlePluginsForWeb/tree/master/areaPlugins" target="blank" class="btn btn-large mar-bot">More</a></p> 
+          </div>
+          <div class="span4">
+            <h1>无限免费获取实时快递</h1>
+            <h2>利用Java实现</h2>
+            <p class="p-pad">感谢指导贴的帮助
+            <a href="http://blog.csdn.net/zgyulongfei/article/details/7909006" target="blank">Java抓取网页数据（原网页+Javascript返回数据）</a>
+            ，由于快递API Url需要收费，而且还有限次数，工作需要，所以利用快递网的跳转API爬取数据</p>
+            <p><a href="https://github.com/MangoGee/myLittlePluginsForWeb/tree/master/expressCheck" target="blank" class="btn btn-large mar-bot">More</a></p> 
+          </div>
+          <div class="span4">
+            <h1>陌攻 混合开发手机app</h1>
+            <h2>利用ionic+Angularjs</h2>
+            <p class="p-pad">这是我第一次做出来的app，以前会做出一个iOS的手机app，没想到因为自己作为前端程序员和前端开发的火热，实现了一个混合型的手机app，也在某种程度上完成了自己的小心愿，并且继续像webapp进发</p>
+            <p><a href="https://github.com/MangoGee/ionic" target="blank" class="btn btn-large mar-bot">More</a></p> 
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="aboutme" class="contain-bottom wrap bg2 spacing-top-bottom">
+      <div class="container bdr-bottom">
+        <div class="row-fluid">
+          <div class="span12">
+            <div class="tabbable"> <!-- Only required for left/right tabs -->
+              <ul class="nav nav-tabs ">
+                <li class="active"><a href="#tab1" data-toggle="tab">About Lazy</a></li>
+                <li><a href="#tab2" data-toggle="tab">About Foodie</a></li>
+              </ul>
+              <div class="tab-content pad-top">
+                <div class="tab-pane active" id="tab1">
+                  <div class="span4"><div class="thumbnail"><img src="img/cat.gif" width="270" height="169" alt="cat" ></div></div>
+                  <div class="span8">
+                    <p>懒惰</p>
+                    <p>指懈怠、好逸恶劳。有时候懒惰是因缺乏行动的欲望，而不想做任何事。怎样才被视为懒惰应依据具体的文化、社会情况及其程度而定。短暂的放松或小憩，通常是很有好处的，有助于提升个体健康指数或者摆脱亚健康状态并达成延年益寿效果的调养生息也是值得提倡的，但若是超过这种程度就变成坏处了，由于懒惰会导致生产力的下降，因此懒惰也会对社会造成问题。虽然要到何种程度才能称懒惰，依社会而定，但在许多社会和宗教里，懒惰往往被视为道德上的罪恶，如天主教教会就将懒惰列为七宗罪之一，不过在现代医学里，感到懒散可能是忧郁症或疲劳的症状之一。</p>
+                  </div>
+                </div>
+                <div class="tab-pane" id="tab2">
+                  <div class="span4"><div class="thumbnail"><img src="img/chook.gif" width="270" height="169" alt="chook" ></div></div>
+                  <div class="span8">
+                    <p>吃货</p>
+                    <p>指贪吃的人。多指喜欢吃各类美食的人，并对美食有一种独特的向往、追求，有品位的美食爱好者、美食客、美食家。对食品情有独钟，看到美食就有很大的食欲。在传统和当下也随各地历史文化和方言发音有着各种解释。吃货最早出现在1991年的电视剧《编辑部的故事》中第七集《水淹七军》戈玲号召大家去吃丰收的萝卜时采用了“吃货”一词。吃货并不算网络文化的创造，但受益于网络时代的传播和共享。吃货更多特指对美食的爱好家，高于一般的吃客。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>    
+      </div>
+    </section>
+
+    <footer class="wrap bg3 spacing-top-bottom">
+      <div class="container">
+        <div class="row-fluid">
+          <div class="span4">
+            <h1 class="footer-heading">Social Contact</h1>
+            <div class="social">
+                  <ul>
+                    <li><a href="https://github.com/MangoGee" target="blank"><img src="img/contact/github.png" width="41" height="40" alt="github"></a></li>
+                    <li><a href="http://weibo.com/u/1788064275" target="blank"><img src="img/contact/weibo.png" width="41" height="40" alt="weibo"></a></li>
+                    <li><a href="https://www.douban.com/people/77403376/" target="blank"><img src="img/contact/douban.png" width="41" height="40" alt="douban"></a></li>
+                  </ul>
+                 
+            </div>
+            <div class="copy-rights">
+                    <p>Copyright &copy; 2017.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script language=javascript src="js/jquery/jquery.js"></script>
+    <script language=javascript src="js/bootstrap/bootstrap.js"></script>
+    <script language=javascript src="js/tools/tools.js"></script>
+    <script src="js/plugins/sweetalert/sweetalert.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+  </body>
+</html>
