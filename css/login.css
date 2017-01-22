@@ -118,6 +118,7 @@ a:hover {
 }
 
 .login-icon {
+	color: #333f45;
 	display: block;
 	width: 35px;
 	height: 35px;
@@ -126,21 +127,13 @@ a:hover {
 	left: 10px;
 }
 
-.login-icon.login-email-logo {
-	background: url("../img/login/username.png") no-repeat;
-}
-
-.login-icon.login-pwd-logo {
-	background: url("../img/login/password.png") no-repeat;
-}
-
 .login-ipt {
 	color: #666;
 	margin-top: 14px;
 	font-size: 12px;
 	height: 35px;
 	border: 1px solid #d3d3d3;
-	padding: 10px 10px;
+	padding: 0 10px;
 	width: 320px;
 	border-radius: 4px;
 	padding-left: 35px;
