@@ -6,9 +6,8 @@
 		unset($_SESSION['user']);
 		unset($_SESSION['userid']);
 
-		$arrData = array("success"=>true,"detail"=>"注销登录成功");
-		echo json_encode($arrData, JSON_UNESCAPED_UNICODE);
-		exit;
+		echo2Json(true, "注销登录成功");
+
 	}
 
 	header("Content-Type:application/json;charset=UTF-8");
@@ -18,26 +17,47 @@
 
 	if ($user == "" || $pwd == "") {
 
-		$arrData = array("success"=>false,"detail"=>"请正确输入邮箱和密码");
+		echo2Json(false, "请正确输入邮箱和密码");
 
-		echo json_encode($arrData, JSON_UNESCAPED_UNICODE);
-
-		exit;
 	} else {
 
 		include('conn.php');
 
 		//查询
+		$pwd = strrev(md5("ppgee".$pwd."PANGPUIKEI"));
 		$queryAcc = "select id, nickname, email, status from users where email='$user' and password='$pwd'";
 		$result = mysql_query($queryAcc);
 		$num = mysql_num_rows($result);
 		if ($num) {
 
-			$arrData = array("success"=>true,"detail"=>"登录成功");
+			$_SESSION['user'] = $user;
+			$_SESSION['userid'] = $result['id'];
 
+			echo2Json(true, "登录成功", $result);
+
+		} else {
+			$queryExist = "select email from users where email='$user'";
+			$isExist = mysql_num_rows(mysql_query($queryExist));
+			if ($isExist) {
+
+				echo2Json(false, "密码错误");
+
+			} else {
+
+				echo2Json(false, "邮箱未注册");
+
+			}
+
+		}
+
+	}
+
+	function echo2Json($success, $detail, $queryResult=null){
+		$arrData = array("success"=>$success,"detail"=>$detail);
+
+		if (!is_null($queryResult)) {
 			$arrResult = array();
-
-			while($row = mysql_fetch_array($result)) {
+			while($row = mysql_fetch_array($queryResult)) {
 				$count = count($row);
 				for ($i=0; $i < $count; $i++) { 
 					unset($row[$i]);
@@ -48,32 +68,10 @@
 			}
 
 			$arrData['result']=$arrResult;
-
-			$_SESSION['user'] = $user;
-			$_SESSION['userid'] = $result['id'];
-
-			echo json_encode($arrData, JSON_UNESCAPED_UNICODE);
-
-			exit;
-
-		} else {
-			$queryExist = "select email from users where email='$user'";
-			$isExist = mysql_num_rows(mysql_query($queryExist));
-			if ($isExist) {
-				$arrData = array("success"=>false,"detail"=>"密码错误");
-
-				echo json_encode($arrData, JSON_UNESCAPED_UNICODE);
-
-				exit;
-			} else {
-				$arrData = array("success"=>false,"detail"=>"邮箱未注册");
-
-				echo json_encode($arrData, JSON_UNESCAPED_UNICODE);
-
-				exit;
-			}
-
 		}
 
+		echo json_encode($arrData, JSON_UNESCAPED_UNICODE);
+
+		exit;
 	}
 ?>
