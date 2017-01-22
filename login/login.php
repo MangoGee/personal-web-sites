@@ -24,7 +24,6 @@
 		include('conn.php');
 
 		//查询
-		$pwd = strrev(md5("ppgee".$pwd."PANGPUIKEI"));
 		$queryAcc = "select id, nickname, email, status from users where email='$user' and password='$pwd'";
 		$result = mysql_query($queryAcc);
 		$num = mysql_num_rows($result);
