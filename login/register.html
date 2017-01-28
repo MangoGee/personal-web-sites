@@ -7,7 +7,6 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	    <link href='http://fonts.googleapis.com/css?family=Lato|Fjalla+One' rel='stylesheet' type='text/css'>
-	    <!-- <link href="../css/bootstrap.min.css" rel="stylesheet"> -->
 	    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 	    <link rel="stylesheet" type="text/css" href="../js/plugins/sweetalert/sweetalert.css">
 
@@ -29,7 +28,7 @@
 		            			<form>
 		            				<div class="login-ipt-box">
 		            					<i class="login-icon icon-login-email"></i>
-		            					<input id="register-email" type="text" class="login-ipt" placeholder="请输入邮箱" value="">
+		            					<input id="register-email" type="text" class="login-ipt" placeholder="请输入邮箱(不支持QQ邮箱)" value="">
 		            				</div>
 		            				<div class="login-ipt-box">
 		            					<i class="login-icon icon-login-password"></i>
@@ -38,6 +37,11 @@
 		            				<div class="login-ipt-box">
 		            					<i class="login-icon icon-login-password"></i>
 		            					<input id="register-comfirepwd" type="password" class="login-ipt" placeholder="请输入确认密码" value="">
+		            				</div>
+		            				<div class="login-ipt-box">
+	            						<i class="login-icon icon-login-activation"></i>
+	            						<input id="input-activation" type="text" class="login-ipt" placeholder="请输入激活码">
+		            					<button id="btn-activation" class="btn btn-success btn-activation">获取激活码</button>
 		            				</div>
 		            			</form>
 		            		</div>

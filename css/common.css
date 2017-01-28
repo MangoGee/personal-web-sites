@@ -6,11 +6,11 @@
 /** 字体图标 **/
 @font-face {
   font-family: 'icologin';
-  src:  url('fonts/icologin.eot?nt9n16');
-  src:  url('fonts/icologin.eot?nt9n16#iefix') format('embedded-opentype'),
-    url('fonts/icologin.ttf?nt9n16') format('truetype'),
-    url('fonts/icologin.woff?nt9n16') format('woff'),
-    url('fonts/icologin.svg?nt9n16#icologin') format('svg');
+  src:  url('fonts/icologin.eot?94pvuw');
+  src:  url('fonts/icologin.eot?94pvuw#iefix') format('embedded-opentype'),
+    url('fonts/icologin.ttf?94pvuw') format('truetype'),
+    url('fonts/icologin.woff?94pvuw') format('woff'),
+    url('fonts/icologin.svg?94pvuw#icologin') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -30,6 +30,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-login-activation:before {
+  content: "\e902";
+}
 .icon-login-email:before {
   content: "\e900";
 }

@@ -24,18 +24,20 @@
 		include('conn.php');
 
 		//查询
-		$queryAcc = "select id, nickname, email, status from users where email='$user' and password='$pwd'";
+		$queryAcc = "**************";
 		$result = mysql_query($queryAcc);
 		$num = mysql_num_rows($result);
 		if ($num) {
 
+			$row = mysql_fetch_array($result, MYSQL_ASSOC);
+			
 			$_SESSION['user'] = $user;
-			$_SESSION['userid'] = $result['id'];
+			$_SESSION['userid'] = $row['id'];
 
 			echo2Json(true, "登录成功", $result);
 
 		} else {
-			$queryExist = "select email from users where email='$user'";
+			$queryExist = "**************";
 			$isExist = mysql_num_rows(mysql_query($queryExist));
 			if ($isExist) {
 

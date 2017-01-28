@@ -10,6 +10,6 @@
 
 	//选择数据库
 	mysql_select_db("库名");
-	mysql_query("set names 'gbk'");		//为避免中文乱码做入库编码转换
+	mysql_query("set names 'utf8'");		//为避免中文乱码做入库编码转换
 
 ?>

@@ -25,6 +25,31 @@
 .navbar .nav li.dropdown.open > .dropdown-toggle {
 	color: rgb(247, 245, 224)!important;
 	background-color: rgb(41, 50, 55)!important;
+	transition: background-color 1s;
+	-moz-transition: background-color 1s; /* Firefox 4 */
+	-webkit-transition: background-color 1s; /* Safari 和 Chrome */
+	-o-transition: background-color 1s; /* Opera */
+}
+
+.dropdown-menu {
+	display: block;
+	visibility: hidden;
+	opacity: 0;
+	filter: Alpha(opacity=0);
+	transition: all .8s;
+	-moz-transition: all .8s; /* Firefox 4 */
+	-webkit-transition: all .8s; /* Safari 和 Chrome */
+	-o-transition: all .8s; /* Opera */
+}
+
+.open .dropdown-menu {
+	visibility: visible;
+	opacity: 1;
+	filter: Alpha(opacity=100);
+	transition: all 1.5s;
+	-moz-transition: all 1.5s; /* Firefox 4 */
+	-webkit-transition: all 1.5s; /* Safari 和 Chrome */
+	-o-transition: all 1.5s; /* Opera */
 }
 
 
@@ -32,6 +57,26 @@ header {
 	position: relative;
 	overflow: hidden;
 	background: url("../img/public-header-bg.png") repeat-x;
+}
+
+.hero-unit a:hover {
+	text-decoration: none;
+}
+
+@keyframes move {
+	0% {margin-left: 0;}
+	50% {margin-left: 14px;}
+	100% {margin-left: 0px;}
+}
+
+@-webkit-keyframes move {
+	0% {margin-left: 0px;}
+	50% {margin-left: 18px;}
+	100% {margin-left: 0px;}
+}
+
+a:hover .btn-arrow {
+	animation: move .8s;
 }
 
 .search-query {
@@ -44,4 +89,68 @@ footer {
 
 .dropdown-menu li {
 	display: none;
+}
+
+.tabbable li {
+	width: 150px;
+}
+
+.tabbable li a {
+	transition: all .4s;
+	-webkit-transition: all .4s;
+	-o-transition: all .4s;
+	-moz-transition: all .4s;
+}
+
+.tabbable li a:hover {
+	background-color: #f7f5e0;
+	color: #868480!important;
+	transition: all .4s;
+	-webkit-transition: all .4s;
+	-o-transition: all .4s;
+	-moz-transition: all .4s;
+}
+
+.tabbable li a:before, .tabbable li a:after{
+	content: '';
+	transition: all 1s;
+	-webkit-transition: all 1s;
+	-o-transition: all 1s;
+	-moz-transition: all 1s;
+}
+
+.tabbable li a:hover:before {
+	color: #868480!important;
+	margin-right: 6px;
+	content: '[';
+}
+
+.tabbable li a:hover:after {
+	color: #868480!important;
+	margin-left: 6px;
+	content: ']';
+}
+
+.contact-icon {
+	transform:none;
+	-ms-transform:none; 	/* IE 9 */
+	-moz-transform:none; 	/* Firefox */
+	-webkit-transform:none; /* Safari 和 Chrome */
+	-o-transform:none; 	/* Opera */
+	transition: all 1s;
+	-moz-transition: all 1s;
+	-webkit-transition: all 1s;
+	-o-transition: all 1s;
+}
+
+.contact-icon:hover {
+	transform:rotate(360deg);
+	-ms-transform:rotate(360deg); 	/* IE 9 */
+	-moz-transform:rotate(360deg); 	/* Firefox */
+	-webkit-transform:rotate(360deg); /* Safari 和 Chrome */
+	-o-transform:rotate(360deg); 	/* Opera */
+	transition: all 1s;
+	-moz-transition: all 1s;
+	-webkit-transition: all 1s;
+	-o-transition: all 1s;
 }

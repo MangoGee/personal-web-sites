@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <title>个人中心</title>
+	    <meta http-equiv="content-type" content="text/html; charset=utf-8" >
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	    <link href='http://fonts.googleapis.com/css?family=Lato|Fjalla+One' rel='stylesheet' type='text/css'>
+	    <link href="../css/bootstrap.min.css" rel="stylesheet">
+	    <link rel="stylesheet" type="text/css" href="../js/plugins/sweetalert/sweetalert.css">
+
+	    <link rel="stylesheet" href="../css/reset.css">
+	    <link rel="stylesheet" href="../css/common.css">
+	    <link rel="stylesheet" href="../css/mine/mine.css">
+
+	</head>
+	<body>
+		<div class="container contain-box">
+			<div class="user row-fluid">
+				<ul class="user-icon">
+					<li id="tab1">
+						<span class="glyphicon glyphicon-user active"></span>
+						<div class="user-title text-center">
+							<p>Card</p>
+							<span></span>
+						</div>
+						<span class="triangle-bottm"></span>
+					</li>
+					<li id="tab2">
+						<span class="glyphicon glyphicon-folder-close"></span>
+						<div class="user-title text-center">
+							<p>Info</p>
+							<span></span>
+						</div>
+						<span class="triangle-bottm"></span>
+					</li>
+					<li id="tab3">
+						<span class="glyphicon glyphicon-envelope"></span>
+						<div class="user-title text-center">
+							<p>Contact</p>
+							<span></span>
+						</div>
+						<span class="triangle-bottm"></span>
+					</li>
+				</ul>
+				<div class="user-content">
+					<div id="namecard" class="user-content-tab active">
+						<div class="display-photo text-center">
+							<div class="card-img">
+								<img id="display_photo" src="../img/display_photo/default.jpg" width="128" height="128">
+								<span id="change_dp" class="img-modal">选择头像</span>
+							</div>
+							<p id="card-username">用户1</p>
+							<p id="card-email">email</p>
+						</div>
+					</div>
+					<div id="info" class="user-content-tab">
+						<form class="user-form form-horizontal">
+							<div class="input-group">
+								<label for="nickname">昵称：</label>
+								<input id="nickname" type="text" class="form-control">
+							</div>
+							<div class="input-group">
+								<label for="birthday">生日：</label>
+								<input id="birthday" type="date" class="form-control">
+							</div>
+							<div class="input-group">
+								<label for="phone" >手机：</label>
+								<input id="phone" type="tel"  class="form-control">
+							</div>
+							<div class="input-group">
+								<label for="email">邮箱：</label>
+								<input id="email" type="text"  class="form-control" readonly="true">
+							</div>
+							<div class="input-group">
+								<label for="website">网站：</label>
+								<input id="website" type="url"  class="form-control">
+							</div>
+							<div class="input-group">
+								<label for="summary">简介：</label>
+								<textarea id="summary" class="form-control" style="resize: none;" rows="3"></textarea>
+							</div>
+							<div class="input-group">
+								<button id="savebtn" type="button" class="btn btn-primary">保存</button>
+							</div>
+						</form>
+					</div>
+					<div id="contact" class="user-content-tab">
+						<p>电邮联系</p>
+						<input id="sender" class="form-control" type="text" required="" placeholder="你的名字">
+						<input id="sender-mail" class="form-control" type="email" required="" placeholder="你的邮箱地址">
+						<input id="subject" class="form-control" type="text" required="" placeholder="你的邮件标题">
+						<textarea id="message" class="form-control" style="resize: none;display: block;" rows="5" required="" placeholder="你的建议"></textarea>
+						<div class="input-group">
+							<button id="sendmail" type="button" class="btn btn-success">发送</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="display_photo_upload">
+			<div class="form-group">
+				<label for="display_photo_upload">更换头像</label>
+				<form id="dp_form" method="post" enctype="multipart/form-data" name="dp_form">
+					<input type="file" name="display_photo_upload" id="display_photo_upload">
+				</form>
+				<p class="help-block">仅支持1MB以内的jpg, png, jpeg, gif格式</p>
+				<p>
+				  <button id="upload" type="button" class="btn btn-primary">确定</button>
+				  <button id="cancel" type="button" class="btn btn-default">取消</button>
+				</p>
+			</div>
+		</div>
+
+		<script language=javascript src="../js/jquery/jquery.js"></script>
+    	<script language=javascript src="../js/bootstrap/bootstrap.js"></script>
+    	<script type="text/javascript" src="../js/plugins/sweetalert/sweetalert.js"></script>
+
+    	<script type="text/javascript" src="../js/tools/tools.js"></script>   	
+    	<script type="text/javascript" src="../js/mine/mine.js"></script>
+	</body>
+</html>
